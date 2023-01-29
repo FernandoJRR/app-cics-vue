@@ -1,6 +1,10 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <v-icon
+      icon="mdi-home"
+      style="border: solid 2px red; color: black;"
+    />
   </div>
 </template>
 
