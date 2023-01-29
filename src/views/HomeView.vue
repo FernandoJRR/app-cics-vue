@@ -3,8 +3,6 @@ import HelloWorld from "../components/HelloWorld.vue";
 </script>
 
 <template>
-  <main>
-
     <img
       alt="Vue logo"
       class="logo"
@@ -12,7 +10,5 @@ import HelloWorld from "../components/HelloWorld.vue";
       width="125"
       height="125"
     />
-
     <HelloWorld msg="App del CICS (TM)" />
-  </main>
 </template>

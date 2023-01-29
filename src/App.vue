@@ -1,17 +1,42 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
+import { ref } from 'vue'
 import Sidebar from "./components/Sidebar.vue";
+
+const theme = ref('light')
+
+function changeTheme() {
+  theme.value = theme.value === 'light' ? 'dark' : 'light'
+}
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <Sidebar/>
-    </div>
-  </header>
+<v-app :theme="theme">
+  <v-navigation-drawer v-model="drawer">
+    <Sidebar @theme="changeTheme"/>
+  </v-navigation-drawer>
 
-  <RouterView />
+   <v-btn
+    color="dark"
+    @click.stop="drawer = !drawer"
+  >
+    Menu
+  </v-btn>   
+
+  <v-main>
+    <RouterView />
+  </v-main>
+</v-app>
 </template>
+<script lang="ts">
+  export default {
+    data () {
+      return {
+        drawer: true,
+      }
+    },
+  }
+</script>
 
 <style scoped>
 header {
