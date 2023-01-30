@@ -1,19 +1,20 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
-import { ref } from 'vue'
-import Sidebar from "./components/Sidebar.vue";
+  import { RouterView } from "vue-router";
+  import { ref } from 'vue'
+  import Sidebar from "./components/Sidebar.vue";
 
-const theme = ref('light')
+  // Variable theme para v-app obtiene el valor de Sidebar.vue
+  const theme = ref('')
 
-function changeTheme() {
-  theme.value = theme.value === 'light' ? 'dark' : 'light'
-}
+  function changeTheme(value:any) {
+    theme.value = value
+  }
 </script>
 
 <template>
 <v-app :theme="theme">
-  <v-navigation-drawer v-model="drawer">
-    <Sidebar @theme="changeTheme"/>
+  <v-navigation-drawer v-model="drawer" width="285">
+    <Sidebar @theme="(theme) => changeTheme(theme)"/>
   </v-navigation-drawer>
 
    <v-btn
