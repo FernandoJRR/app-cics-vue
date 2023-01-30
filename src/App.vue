@@ -1,30 +1,43 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+  import { RouterView } from "vue-router";
+  import { ref } from 'vue'
+  import Sidebar from "./components/Sidebar.vue";
+
+  // Variable theme para v-app obtiene el valor de Sidebar.vue
+  const theme = ref('')
+
+  function changeTheme(value:any) {
+    theme.value = value
+  }
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+<v-app :theme="theme">
+  <v-navigation-drawer v-model="drawer" width="285">
+    <Sidebar @theme="(theme) => changeTheme(theme)"/>
+  </v-navigation-drawer>
 
-    <div class="wrapper">
-      <HelloWorld msg="App del CICS (TM)" />
+   <v-btn
+    color="dark"
+    @click.stop="drawer = !drawer"
+  >
+    Menu
+  </v-btn>   
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <v-main>
+    <RouterView />
+  </v-main>
+</v-app>
 </template>
+<script lang="ts">
+  export default {
+    data () {
+      return {
+        drawer: true,
+      }
+    },
+  }
+</script>
 
 <style scoped>
 header {
