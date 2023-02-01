@@ -5,14 +5,23 @@ const props = defineProps({
   theme: String
 });
 
+function getLogo(theme: any){
+   if (theme === 'light') {
+     return new URL("@/assets/logo-cics-light.png", import.meta.url).href
+   }
+   return new URL("@/assets/logo-cics-dark.png", import.meta.url).href
+}
 </script>
 
 <template>
   <v-container align="center">
-    <img
-      alt="Vue logo"
-      :src="'/img/logo-cics-'+props.theme+'.png'"
+    <v-img
+      max-width="450"
+      alt="Logo CICS"
+      :src="getLogo(props.theme)"
     />
     <Home/>
   </v-container>
 </template>
+<style scoped>
+</style>
