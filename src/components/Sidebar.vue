@@ -82,12 +82,14 @@
         </template>
 
         <!--Si no hay ninguna herramienta puede tirar error esta tag-->
+        <!--
         <v-list-item
           v-for="([title, path], i) in herramientas"
           :key="i"
           :title="title" 
           :to="path"
         />
+        -->
       </v-list-group>
 
       <v-list-item prepend-icon="mdi-web" title="Acerca de" to='about'/>
