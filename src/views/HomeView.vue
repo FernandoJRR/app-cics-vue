@@ -1,14 +1,18 @@
 <script setup lang="ts">
-import HelloWorld from "../components/HelloWorld.vue";
+import Home from "../components/Home.vue";
+
+const props = defineProps({
+  theme: String
+});
+
 </script>
 
 <template>
+  <v-container align="center">
     <img
       alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
+      :src="'/img/logo-cics-'+props.theme+'.png'"
     />
-    <HelloWorld msg="App del CICS (TM)" />
+    <Home/>
+  </v-container>
 </template>

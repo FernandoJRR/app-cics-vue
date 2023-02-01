@@ -17,15 +17,12 @@
     <Sidebar @theme="(theme) => changeTheme(theme)"/>
   </v-navigation-drawer>
 
-   <v-btn
-    color="dark"
-    @click.stop="drawer = !drawer"
-  >
+   <v-btn style="white-space: normal;" variant="text" @click.stop="drawer = !drawer" >
     Menu
   </v-btn>   
 
   <v-main>
-    <RouterView />
+    <RouterView :theme="theme"/>
   </v-main>
 </v-app>
 </template>
