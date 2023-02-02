@@ -23,5 +23,3 @@ function getLogo(theme: any){
     <Home/>
   </v-container>
 </template>
-<style scoped>
-</style>

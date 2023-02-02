@@ -59,7 +59,7 @@
     <v-list density="compact">
       <v-list-item prepend-icon="mdi-home" title="Home" to='/'/>
       <v-divider/>
-      <v-list-item prepend-icon="mdi-calendar-month" title="Horarios" to='about'/>
+      <v-list-item prepend-icon="mdi-calendar-month" title="Horarios" to='horarios'/>
       <v-list-item prepend-icon="mdi-card-bulleted-settings-outline" title="Pensums" to='about'/>
       <v-list-item prepend-icon="mdi-help" title="FAQ | Primer Ingreso" to='about'/>
       <v-list-item prepend-icon="mdi-help" title="FAQ" to='about'/>
