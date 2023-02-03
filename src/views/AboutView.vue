@@ -4,9 +4,30 @@
       Acerca de esta aplicación
     </h1>
     <h2>
-      Subtitulo
+      Información básica
     </h2>
     <v-divider thickness="3" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, hic, sequi veritatis doloremque voluptatem quas expedita tenetur illum reiciendis impedit odio accusantium minima itaque dolores beatae corporis perspiciatis dignissimos molestiae?
+    </p>
+    <p>
+      {{ $route.alias }}
+    </p>
+    <h2>
+      Desarrollo
+    </h2>
+    <v-divider thickness="3" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, hic, sequi veritatis doloremque voluptatem quas expedita tenetur illum reiciendis impedit odio accusantium minima itaque dolores beatae corporis perspiciatis dignissimos molestiae?
+    </p>
+
+    <h2>
+      Contribuciones
+    </h2>
+    <v-divider thickness="3" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, hic, sequi veritatis doloremque voluptatem quas expedita tenetur illum reiciendis impedit odio accusantium minima itaque dolores beatae corporis perspiciatis dignissimos molestiae?
+    </p>
   </v-container>
 </template>
 

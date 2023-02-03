@@ -441,7 +441,6 @@
   h3 {
     font-size: 1.2rem;
   }
-
 /*Si la pantalla es pequena el header estara centrado y el texto a la izquierda*/
   .greetings h1,
   .greetings h2 {

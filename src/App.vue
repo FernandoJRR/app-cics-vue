@@ -1,5 +1,6 @@
 <template>
   <v-app :theme="theme">
+    <!-- TODO: extract app bar to individual component -->
     <v-app-bar
       color="blue-grey"
       :elevation="elevation"
@@ -14,6 +15,7 @@
         <v-btn icon="mdi-dots-vertical" />
       </template>
       <v-app-bar-title class="mt-n1">
+        <!-- TODO: show page name, possibly with emit -->
         <strong>
           APP CICS - CUNOC
         </strong>
@@ -22,12 +24,12 @@
     
     <v-navigation-drawer
       v-model="drawer"
-      width="320"
+      :width="$vuetify.display.mdAndUp ? 340 : 300"
       class="navigation-sidebar"
     >
       <Sidebar @theme="(theme: string) => changeTheme(theme)" />
     </v-navigation-drawer>
-
+    
     <v-main>
       <RouterView :theme="theme" />
     </v-main>
