@@ -62,7 +62,7 @@
             class="mx-3"
             max-width="600"
             v-bind="props" 
-            to="about"
+            to="horarios"
           >
             <v-img              
               :class="{ 'on-hover': isHovering }"
@@ -126,7 +126,7 @@
             class="mx-3"
             max-width="600"
             v-bind="props" 
-            to="about"
+            to="faq-primer-ingreso"
           >
             <v-img              
               :class="{ 'on-hover': isHovering }"

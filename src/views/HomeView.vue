@@ -31,5 +31,3 @@ export default {
     <Home />
   </v-container>
 </template>
-<style scoped>
-</style>
