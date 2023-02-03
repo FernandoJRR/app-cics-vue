@@ -12,6 +12,14 @@ function getLogo(theme: any){
    return new URL("@/assets/logo-cics-dark.png", import.meta.url).href
 }
 </script>
+<script lang="ts">
+export default {
+  emits: ['currentPage'],
+  mounted() {
+    this.$emit('currentPage', 'Inicio')   
+  },
+}
+</script>
 
 <template>
   <v-container align="center">
@@ -20,6 +28,6 @@ function getLogo(theme: any){
       alt="Logo CICS"
       :src="getLogo(props.theme)"
     />
-    <Home/>
+    <Home />
   </v-container>
 </template>
