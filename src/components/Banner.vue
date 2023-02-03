@@ -5,10 +5,10 @@ defineProps<{
 </script>
 
 <template>
-  <v-banner max-height="300">
+  <v-banner max-height="300" sticky style="z-index: 1000;">
       <v-card
         class="mx-auto"
-        max-height="200"
+        max-height="170"
       >
         <v-img :src="urlImg" cover></v-img>
         <v-overlay
