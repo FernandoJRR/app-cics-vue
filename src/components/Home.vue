@@ -32,39 +32,49 @@
 </script>
 <template>
   <div class="greetings">
-    <h1 class="green">Aplicacion para Estudiantes</h1>
-    <v-divider thickness="3"/>
+    <h1>
+      Aplicacion para Estudiantes
+    </h1>
+    <v-divider thickness="3" />
     <br>
     <br>
-    <h3>
+    <p>
       La aplicacion para los estudiantes de Ingenieria del CUNOC fue creada con el fin
       de apoyar a los estudiantes a encontrar informacion que les puede ser util a lo largo
       de su carrera.
-    </h3>
+    </p>
     <br>
-    <h3>
+    <p>
       La aplicacion esta compuesta por secciones con informacion y herramientas.
-    </h3>
+    </p>
     <br>
 
-    <h2 class="green">Informacion</h2>
-    <v-divider thickness="3"/>
+    <h2 class="green">
+      Informacion
+    </h2>
+    <v-divider thickness="3" />
     <br>
     <br>
     <v-row justify="center">
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
               cover
               :src="imagenes.horario"
-            ></v-img>
+            />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Para organizarte</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Para organizarte
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 Horarios
@@ -79,8 +89,12 @@
       </v-col>
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -89,7 +103,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Para planificar</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Para planificar
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 Pensums
@@ -106,8 +122,12 @@
 
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -116,7 +136,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Para ayudarte al inicio</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Para ayudarte al inicio
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 FAQ | Primer Ingreso
@@ -131,8 +153,12 @@
       </v-col>
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -141,7 +167,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Para ayudarte</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Para ayudarte
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 FAQ
@@ -156,15 +184,21 @@
       </v-col>
     </v-row>
 
-    <h2 class="green">Asociaciones Estudiantiles</h2>
-    <v-divider thickness="3"/>
+    <h2 class="green">
+      Asociaciones Estudiantiles
+    </h2>
+    <v-divider thickness="3" />
     <br>
     <br>
     <v-row justify="center">
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -173,7 +207,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Acerca del comite</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Acerca del comite
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 CICS
@@ -188,8 +224,12 @@
       </v-col>
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -198,7 +238,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Acerca de la asociacion</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Acerca de la asociacion
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 AEIO
@@ -213,15 +255,21 @@
       </v-col>
     </v-row>
 
-    <h2 class="green">Material y Utilidades</h2>
-    <v-divider thickness="3"/>
+    <h2 class="green">
+      Material y Utilidades
+    </h2>
+    <v-divider thickness="3" />
     <br>
     <br>
     <v-row justify="center">
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -230,7 +278,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Para orientarte</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Para orientarte
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 Manuales
@@ -245,8 +295,12 @@
       </v-col>
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -255,7 +309,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Para estudiar</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Para estudiar
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 Biblioteca
@@ -271,8 +327,12 @@
 
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -281,7 +341,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Para investigar</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Para investigar
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 Tesario
@@ -298,8 +360,12 @@
     <v-row justify="center">
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -308,7 +374,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Como ayuda</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Como ayuda
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 Herramientas
@@ -324,8 +392,12 @@
 
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+          <v-card
+            class="mx-3"
+            max-width="600"
+            v-bind="props" 
+            to="about"
+          >
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"
@@ -334,7 +406,9 @@
             />
 
             <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">Para saber mas</div>
+              <div class="font-weight-light text-grey text-h6 mb-2">
+                Para saber mas
+              </div>
 
               <h3 class="text-h4 font-weight-light text-orange mb-2">
                 Acerca de
@@ -357,11 +431,10 @@
     font-weight: 500;
     font-size: 2rem;
     top: -10px;
-    margin-top: 3%;
   }
   h1 {
-    font-weight: 500;
-    font-size: 2.6rem;
+    font-weight: 600;
+    font-size: 2.4rem;
     top: -10px;
   }
 
@@ -385,25 +458,21 @@
       text-align: left;
     }
 
-    .greetings h3 {
+    .greetings p {
       text-align: left;
     }
   }
 
 /*Opacidad de las tarjetas*/
   .v-img {
-    transition: opacity .4s ease-in-out;
+    transition: opacity .2s ease-in-out;
   }
 
   .v-img:not(.on-hover) {
-    opacity: 1;
+    opacity: .9;
   }
 
   .v-img.on-hover {
-    opacity: .5;
-  }
-
-  .show-btns {
-    color: rgba(255, 255, 255, 1) !important;
+    opacity: 1;
   }
 </style>
