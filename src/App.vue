@@ -1,8 +1,7 @@
 <template>
   <v-app :theme="theme">
-    <!-- TODO: extract app bar to individual component -->
     <v-app-bar
-      color="blue-grey"
+      :color="theme === 'light' ? 'white ': 'black'"
       :elevation="elevation"
     >
       <template #prepend>
@@ -11,14 +10,9 @@
           @click="drawer = !drawer"
         />
       </template>
-      <template #append>
-        <v-btn icon="mdi-dots-vertical" />
-      </template>
+
       <v-app-bar-title class="mt-n1">
-        <!-- TODO: show page name, possibly with emit -->
-        <strong>
-          APP CICS - CUNOC
-        </strong>
+        <strong>{{ currentPage }} </strong> - APP
       </v-app-bar-title>
     </v-app-bar>
     
@@ -31,13 +25,16 @@
     </v-navigation-drawer>
     
     <v-main>
-      <RouterView :theme="theme" />
+      <RouterView
+        :theme="theme"
+        @current-page="currentPage = $event"
+      />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
-import Sidebar from "./components/Sidebar.vue";
+import Sidebar from "./components/SidebarContent.vue";
 export default {
   components: {
     Sidebar,
@@ -45,7 +42,8 @@ export default {
   data () {
     return {
       drawer: true,
-      theme: 'light'
+      theme: 'light',
+      currentPage: ''
     }
   },
   computed: {
@@ -61,6 +59,5 @@ export default {
 }
 </script>
 <style lang="scss">
-// @import "./assets/styles/main.scss";
-
+@import '@/assets/styles/main.scss';
 </style>

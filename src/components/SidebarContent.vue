@@ -18,7 +18,7 @@
         title="Inicio"
         to="/"
         class="rounded-lg"
-        active-class="bg-blue-grey-darken-2 rounded-pill"
+        active-class="bg-orange-accent-4 rounded-pill"
       />
   
       <v-divider
@@ -34,7 +34,7 @@
         :title="title"
         :to="route"
         class="rounded-lg"
-        active-class="bg-blue-grey-darken-2 rounded-pill"
+        active-class="bg-orange-accent-4 rounded-pill"
       />
   
       <v-divider
@@ -50,7 +50,7 @@
         :title="title"
         :to="route"
         class="rounded-lg"
-        active-class="bg-blue-grey-darken-2 rounded-pill"
+        active-class="bg-orange-accent-4 rounded-pill"
       />
   
       <v-divider
@@ -66,7 +66,7 @@
         :title="title"
         :to="route"
         class="rounded-lg"
-        active-class="bg-blue-grey-darken-2 rounded-pill"
+        active-class="bg-orange-accent-4 rounded-pill"
       />
   
       <v-list-group value="Herramientas">
@@ -90,7 +90,7 @@
         title="Acerca de"
         to="about"
         class="rounded-lg"
-        active-class="bg-blue-grey-darken-2 rounded-pill"
+        active-class="bg-orange-accent-4 rounded-pill"
       />
       <v-container align="center">
         <v-switch

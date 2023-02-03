@@ -10,9 +10,6 @@
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, hic, sequi veritatis doloremque voluptatem quas expedita tenetur illum reiciendis impedit odio accusantium minima itaque dolores beatae corporis perspiciatis dignissimos molestiae?
     </p>
-    <p>
-      {{ $route.alias }}
-    </p>
     <h2>
       Desarrollo
     </h2>
@@ -30,7 +27,14 @@
     </p>
   </v-container>
 </template>
-
+<script lang="ts">
+export default {
+  emits: ['currentPage'],
+  mounted() {
+    this.$emit('currentPage', 'Acerca de')   
+  },
+}
+</script>
 <style>
 h1 {
   font-weight: 500;
