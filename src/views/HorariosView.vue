@@ -9,7 +9,7 @@ export default {
   const bannerImg = new URL("@/assets/horario.jpg", import.meta.url).href
 </script>
 <template>
-  <Banner :url-img="bannerImg"/>
+  <Banner :url-img="bannerImg" :title="'Horarios'"/>
   <Horarios/>
 </template>
 <style scoped>

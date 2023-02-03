@@ -1,7 +1,9 @@
 <script setup lang="ts">
-defineProps<{
-  urlImg: string
-}>()
+const props = defineProps({
+    urlImg: { type: String, required: true},
+    title: { type: String, required: true},
+    heightImg: { type: Number, required: false, default: 100}
+});
 </script>
 
 <template>
@@ -10,7 +12,7 @@ defineProps<{
         class="mx-auto"
         max-height="170"
       >
-        <v-img :src="urlImg" cover></v-img>
+        <v-img :src="urlImg" cover/>
         <v-overlay
           :model-value="true"
           persistent
@@ -18,13 +20,10 @@ defineProps<{
           scrim="true"
           class="align-center justify-center"
         >
-          <h1>Horarios</h1>
+          <h1>{{title}}</h1>
         </v-overlay>
       </v-card>
   </v-banner>
-  <v-container align="center">
-    <Horarios/>
-  </v-container>
 </template>
 <style scoped>
   h1 {

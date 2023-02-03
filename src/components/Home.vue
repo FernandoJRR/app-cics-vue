@@ -107,7 +107,7 @@
       <v-col sm="3">
         <v-hover v-slot="{ isHovering, props }">
           <v-card class="mx-3" max-width="600" v-bind="props" 
-            to="about">
+            to="faq-primer-ingreso">
             <v-img              
               :class="{ 'on-hover': isHovering }"
               :aspect-ratio="16/9"

@@ -61,7 +61,7 @@
       <v-divider/>
       <v-list-item prepend-icon="mdi-calendar-month" title="Horarios" to='horarios'/>
       <v-list-item prepend-icon="mdi-card-bulleted-settings-outline" title="Pensums" to='about'/>
-      <v-list-item prepend-icon="mdi-help" title="FAQ | Primer Ingreso" to='about'/>
+      <v-list-item prepend-icon="mdi-help" title="FAQ | Primer Ingreso" to='faq-primer-ingreso'/>
       <v-list-item prepend-icon="mdi-help" title="FAQ" to='about'/>
       <v-divider/>
       <v-list-item prepend-icon="mdi-account-group" title="CICS" to='about'/>
