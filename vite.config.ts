@@ -11,5 +11,14 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  base: '/app-cics-vue/'
+  base: '/app-cics-vue/',
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "./assets/styles/main.scss";
+        `
+      }
+    }
+  }
 });

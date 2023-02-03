@@ -1,21 +1,40 @@
 <template>
-<v-app :theme="theme">
-  <v-navigation-drawer v-model="drawer" width="285">
-    <Sidebar @theme="(theme: string) => changeTheme(theme)"/>
-  </v-navigation-drawer>
+  <v-app :theme="theme">
+    <v-app-bar
+      :color="theme === 'light' ? 'white ': 'black'"
+      :elevation="elevation"
+    >
+      <template #prepend>
+        <v-btn
+          :icon="drawer ? 'mdi-backburger' : 'mdi-menu'"
+          @click="drawer = !drawer"
+        />
+      </template>
 
-   <v-btn style="white-space: normal;" variant="text" @click.stop="drawer = !drawer" >
-    Menu
-  </v-btn>   
-
-  <v-main>
-    <RouterView :theme="theme"/>
-  </v-main>
-</v-app>
+      <v-app-bar-title class="mt-n1">
+        <strong>{{ currentPage }} </strong> - APP
+      </v-app-bar-title>
+    </v-app-bar>
+    
+    <v-navigation-drawer
+      v-model="drawer"
+      :width="$vuetify.display.mdAndUp ? 340 : 300"
+      class="navigation-sidebar"
+    >
+      <Sidebar @theme="(theme: string) => changeTheme(theme)" />
+    </v-navigation-drawer>
+    
+    <v-main>
+      <RouterView
+        :theme="theme"
+        @current-page="currentPage = $event"
+      />
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
-import Sidebar from "./components/Sidebar.vue";
+import Sidebar from "./components/SidebarContent.vue";
 export default {
   components: {
     Sidebar,
@@ -23,13 +42,22 @@ export default {
   data () {
     return {
       drawer: true,
-      theme: 'light'
+      theme: 'light',
+      currentPage: ''
     }
+  },
+  computed: {
+    elevation (){
+      return this.drawer === true ? 1 : 0
+    },
   },
   methods: {
     changeTheme(value: string){
       this.theme = value
     }
-  },
+  }
 }
 </script>
+<style lang="scss">
+@import '@/assets/styles/main.scss';
+</style>
