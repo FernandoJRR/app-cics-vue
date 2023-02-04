@@ -1,11 +1,17 @@
 <template>
   <Banner :url-img="bannerImg" :title="'FAQ | Primer Ingreso'"/>
 </template>
-<script setup lang="ts">
+<script lang="ts">
 import Banner from "../components/Banner.vue"
-const bannerImg = new URL("@/assets/faq.jpg", import.meta.url).href
+export default {
+  emits: ['currentPage'],
+  mounted() {
+    this.$emit('currentPage', 'FAQ | Primer Ingreso')   
+  },
+  data() {
+    return {
+      bannerImg: new URL("@/assets/faq.jpg", import.meta.url).href
+    }
+  },
+}
 </script>
-
-<style scoped>
-
-</style>
