@@ -1,7 +1,7 @@
 <template>
   <v-app :theme="theme">
     <v-app-bar
-      :color="theme === 'light' ? 'white ': 'black'"
+      :color="theme === 'light' ? 'white ': '#121212'"
       :elevation="elevation"
     >
       <template #prepend>

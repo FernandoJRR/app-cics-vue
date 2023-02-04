@@ -113,7 +113,7 @@
         basicInfoItems: [
           ['mdi-calendar-month-outline', 'Horarios', 'horarios'],
           ['mdi-card-bulleted-settings-outline', 'Pensums', 'pensums'],
-          ['mdi-help-box-outline', 'FAQ | Primer Ingreso', 'faq-pi'],
+          ['mdi-help-box-outline', 'FAQ | Primer Ingreso', 'faq-primer-ingreso'],
           ['mdi-help-box-outline', 'FAQ', 'faq']
         ],
         associations: [
@@ -126,10 +126,12 @@
         ['mdi-book-account-outline','Tesario','tesario'],
         ],
         theme: 'light',
-        modelSwitch: this.theme === 'light' ? true : false,
         tools: [
         ],
       }
+    },
+    computed: {
+      modelSwitch(){return this.theme === 'light' ? false : true}
     },
     methods: {
       changeTheme (){

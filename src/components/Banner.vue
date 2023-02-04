@@ -7,10 +7,11 @@ const props = defineProps({
 </script>
 
 <template>
+<!--
   <v-banner max-height="300" sticky style="z-index: 1000;">
       <v-card
         class="mx-auto"
-        max-height="170"
+        max-height="140"
       >
         <v-img :src="urlImg" cover/>
         <v-overlay
@@ -24,6 +25,16 @@ const props = defineProps({
         </v-overlay>
       </v-card>
   </v-banner>
+  -->
+
+  <div align="center">
+    <h1>
+      {{title}}
+    </h1>
+    <v-divider thickness="3" style="max-width: 70%;"/>
+    <br>
+    <br>
+  </div>
 </template>
 <style scoped>
   h1 {
