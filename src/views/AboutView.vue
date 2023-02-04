@@ -1,6 +1,9 @@
 <template>
-  <Banner :url-img="bannerImg" :title="'Acerca de'"/>
-  <About/>
+  <Banner
+    :url-img="bannerImg"
+    :title="'Acerca de'"
+  />
+  <About />
 </template>
 <script lang="ts">
 import Banner from "../components/Banner.vue"
@@ -11,13 +14,13 @@ export default {
     About
   },
   emits: ['currentPage'],
-  mounted() {
-    this.$emit('currentPage', 'Acerca de')   
-  },
   data() {
     return {
       bannerImg: new URL("@/assets/acerca_de.jpg", import.meta.url).href
     }
+  },
+  mounted() {
+    this.$emit('currentPage', 'Acerca de')   
   },
 }
 </script>

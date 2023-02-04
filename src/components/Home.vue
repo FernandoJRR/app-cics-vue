@@ -1,477 +1,244 @@
-<script lang="ts">
-  export default {
-    data () {
-      return {
-        //Secciones
-        secciones: [
-          [ 'Horarios del Semestre' , 'about'],
-          [ 'Pensums de Estudio' , 'about'],
-          [ 'FAQ | Primer Ingreso' , 'about'],
-          [ 'FAQ' , 'about'],
-          [ 'CICS' , 'about'],
-          [ 'AEIO' , 'about'],
-          [ 'Manuales' , 'about'],
-          [ 'Biblioteca' , 'about'],
-          [ 'Tesario' , 'about'],
-        ],
-        imagenes: {
-          horario: new URL("@/assets/horario.jpg", import.meta.url).href,
-          pensum: new URL("@/assets/pensum.jpeg", import.meta.url).href,
-          faq: new URL("@/assets/faq.jpg", import.meta.url).href,
-          cics: new URL("@/assets/cics.png", import.meta.url).href,
-          aeio: new URL("@/assets/aeio.jpg", import.meta.url).href,
-          manuales: new URL("@/assets/manuales.jpg", import.meta.url).href,
-          biblioteca: new URL("@/assets/biblioteca.jpg", import.meta.url).href,
-          tesario: new URL("@/assets/tesario.jpg", import.meta.url).href,
-          herramientas: new URL("@/assets/herramientas.jpg", import.meta.url).href,
-          acercaDe: new URL("@/assets/acerca_de.jpg", import.meta.url).href,
-        }
-      }
-    },
-  }
-</script>
 <template>
   <div class="greetings">
     <h1>
-      Aplicacion para Estudiantes
+      Aplicación para Estudiantes
     </h1>
     <v-divider thickness="3" />
-    <br>
-    <br>
-    <p>
-      La aplicacion para los estudiantes de Ingenieria del CUNOC fue creada con el fin
-      de apoyar a los estudiantes a encontrar informacion que les puede ser util a lo largo
-      de su carrera.
-    </p>
-    <br>
-    <p>
-      La aplicacion esta compuesta por secciones con informacion y herramientas.
-    </p>
-    <br>
-
-    <h2 class="green">
-      Informacion
-    </h2>
-    <v-divider thickness="3" />
-    <br>
-    <br>
-    <v-row justify="center">
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="horarios"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.horario"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Para organizarte
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                Horarios
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Horarios de clases y laboratorios.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
-      </v-col>
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="about"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.pensum"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Para planificar
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                Pensums
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Recopilatorio de los pensums de las diferentes carreras de la division,<br>
-                y herramienta para calcular diferentes datos acerca de tu pensum.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
-      </v-col>
-
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="faq-primer-ingreso"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.faq"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Para ayudarte al inicio
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                FAQ | Primer Ingreso
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Preguntas Frecuentes para los estudiantes de primer ingreso.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
-      </v-col>
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="about"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.faq"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Para ayudarte
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                FAQ
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Preguntas Frecuentes para estudiantes de reingreso.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
+    <div class="my-6">
+      <p>
+        La aplicación para los estudiantes de Ingenieria del Centro Universitario De Occidente fue creada con el fin
+        de apoyar a los estudiantes a encontrar informacion que les puede ser util a lo largo
+        de su carrera.
+      </p>
+      <br>
+      <p>
+        La aplicacion esta compuesta por secciones con informacion y herramientas.
+      </p>
+    </div>
+    <div class="section-divider">
+      <h2 class="green">
+        Informacion Básica
+      </h2>
+      <v-divider thickness="3" />
+    </div>
+    <v-row>
+      <v-col
+        v-for="item, index in sections.basicInfo"
+        :key="index"
+        cols="12"
+        xs="12"
+        sm="12"
+        lg="4"
+      >
+        <info-card 
+          :img="item.img"
+          :title="item.title"
+          :subtitle="item.subtitle"
+          :description="item.description"
+          :route="item.route"
+        />
       </v-col>
     </v-row>
 
-    <h2 class="green">
-      Asociaciones Estudiantiles
-    </h2>
-    <v-divider thickness="3" />
-    <br>
-    <br>
-    <v-row justify="center">
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="about"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.cics"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Acerca del comite
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                CICS
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Informacion relevante del Comite de Ingenieria en Ciencias y Sistemas.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
-      </v-col>
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="about"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.aeio"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Acerca de la asociacion
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                AEIO
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Informacion relevante de la Asociacion de Estudiantes de Ingenieria de Occidente.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
+    <div class="section-divider">
+      <h2 class="green">
+        Asociaciones Estudiantiles
+      </h2>
+      <v-divider thickness="3" />
+    </div>
+    <v-row>
+      <v-col
+        v-for="item, index in sections.associations"
+        :key="index"
+        cols="12"
+        xs="12"
+        sm="12"
+        lg="4"
+      >
+        <info-card 
+          :img="item.img"
+          :title="item.title"
+          :subtitle="item.subtitle"
+          :description="item.description"
+          :route="item.route"
+        />
       </v-col>
     </v-row>
 
-    <h2 class="green">
-      Material y Utilidades
-    </h2>
-    <v-divider thickness="3" />
-    <br>
-    <br>
-    <v-row justify="center">
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="about"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.manuales"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Para orientarte
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                Manuales
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Manuales e infografias acerca de procesos importantes en la universidad.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
-      </v-col>
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="about"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.biblioteca"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Para estudiar
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                Biblioteca
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Material de estudio de los diferentes cursos de la Division.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
-      </v-col>
-
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="about"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.tesario"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Para investigar
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                Tesario
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Recopilacion de las tesis de estudiantes de ingenieria a lo largo del tiempo.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
+    <div class="section-divider">
+      <h2 class="green">
+        Material y Recursos
+      </h2>
+      <v-divider thickness="3" />
+    </div>
+    <v-row>
+      <v-col
+        v-for="item, index in sections.resources"
+        :key="index"
+        cols="12"
+        xs="12"
+        sm="12"
+        lg="4"
+      >
+        <info-card 
+          :img="item.img"
+          :title="item.title"
+          :subtitle="item.subtitle"
+          :description="item.description"
+          :route="item.route"
+        />
       </v-col>
     </v-row>
-    <v-row justify="center">
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="about"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.herramientas"
-            />
 
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Como ayuda
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                Herramientas
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Herramientas en forma de snippets para ayudar a estudiantes.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
-      </v-col>
-
-      <v-col sm="3">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card
-            class="mx-3"
-            max-width="600"
-            v-bind="props" 
-            to="about"
-          >
-            <v-img              
-              :class="{ 'on-hover': isHovering }"
-              :aspect-ratio="16/9"
-              cover
-              :src="imagenes.acercaDe"
-            />
-
-            <v-card-text class="pt-6">
-              <div class="font-weight-light text-grey text-h6 mb-2">
-                Para saber mas
-              </div>
-
-              <h3 class="text-h4 font-weight-light text-orange mb-2">
-                Acerca de
-              </h3>
-
-              <div class="font-weight-light text-h6 mb-2">
-                Informacion acerca de la aplicacion, su desarrollo y mantenimiento.
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
+    <div class="section-divider">
+      <h2 class="green">
+        Extra
+      </h2>
+      <v-divider thickness="3" />
+    </div>
+    <v-row>
+      <v-col
+        v-for="item, index in sections.extra"
+        :key="index"
+        cols="12"
+        xs="12"
+        sm="12"
+        lg="4"
+      >
+        <info-card 
+          :img="item.img"
+          :title="item.title"
+          :subtitle="item.subtitle"
+          :description="item.description"
+          :route="item.route"
+        />
       </v-col>
     </v-row>
   </div>
 </template>
-
+<script lang="ts">
+import InfoCard from './home/InfoCard.vue';
+  export default {
+    components: {
+      InfoCard
+    },
+    data () {
+      return {
+        sections: {
+          basicInfo: [
+            {
+              title: 'Horarios de Semestre',
+              subtitle: 'Para organizarte',
+              description: 'Horarios de clases y laboratorios del semestre en curso',
+              route: 'horarios',
+              img: new URL("@/assets/horario.jpg", import.meta.url).href
+            },
+            {
+              title: 'Pensums de Estudio',
+              subtitle: 'Para planificar',
+              description: ' Recopilatorio de los pensums de las diferentes carreras de la division, y herramienta para calcular diferentes datos acerca de tu pensum.',
+              route: '',
+              img: new URL("@/assets/pensum.jpeg", import.meta.url).href 
+            },
+            {
+              title: 'FAQ | Primer Ingreso',
+              subtitle: 'Para ayudarte al inicio',
+              description: 'Preguntas Frecuentes para los estudiantes de primer ingreso',
+              route: '',
+              img: new URL("@/assets/faq.jpg", import.meta.url).href 
+            },
+            {
+              title: 'FAQ',
+              subtitle: 'Para ayudarte',
+              description: 'Preguntas Frecuentes para estudiantes de reingreso',
+              route: '',
+              img: new URL("@/assets/faq.jpg", import.meta.url).href 
+            },
+          ],
+          associations: [
+            {
+              title: 'CICS',
+              subtitle: 'Acerca del comite',
+              description: 'Informacion relevante del Comite de Ingenieria en Ciencias y Sistemas',
+              route: '',
+              img: new URL("@/assets/cics.png", import.meta.url).href 
+            },
+            {
+              title: 'AEIO',
+              subtitle: 'Acerca de la asociacion',
+              description: 'Informacion relevante de la Asociacion de Estudiantes de Ingenieria de Occidente',
+              route: '',
+              img: new URL("@/assets/aeio.jpg", import.meta.url).href 
+            },
+          ],
+          resources: [
+            {
+              title: 'Manuales',
+              subtitle: 'Para orientarte',
+              description: 'Manuales e infografias acerca de procesos importantes en la universidad',
+              route: '',
+              img: new URL("@/assets/manuales.jpg", import.meta.url).href 
+            },
+            {
+              title: 'Biblioteca',
+              subtitle: 'Para estudiar',
+              description: 'Material de estudio de los diferentes cursos de la Division',
+              route: '',
+              img: new URL("@/assets/biblioteca.jpg", import.meta.url).href
+            },
+            {
+              title: 'Tesario',
+              subtitle: 'Para investigar',
+              description: 'Recopilacion de las tesis de estudiantes de ingenieria a lo largo del tiempo.',
+              route: '',
+              img: new URL("@/assets/tesario.jpg", import.meta.url).href
+            },
+          ],
+          extra: [
+            {
+              title: 'Acerca de',
+              subtitle: 'Más informacion',
+              description: 'Conoce más acerca de esta aplicacion, su desarrollo, y cómo puedes contribuir',
+              route: 'about',
+              img: new URL("@/assets/acerca_de.jpg", import.meta.url).href
+            },
+          ]
+        },
+      }
+    },
+  }
+</script>
 <style scoped>
 /*Estilo para los textos*/
   h2 {
-    font-weight: 500;
-    font-size: 2rem;
-    top: -10px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
   }
   h1 {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 2.4rem;
-    top: -10px;
+    text-transform: uppercase;
   }
 
-  h3 {
-    font-size: 1.2rem;
+  .section-divider {
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 /*Si la pantalla es pequena el header estara centrado y el texto a la izquierda*/
-  .greetings h1,
+  /* .greetings h1,
   .greetings h2 {
     text-align: center;
-  }
-  .greetings h3 {
-    text-align: left;
-  }
+  } */
 
 /*Si la pantalla es grande el header y texto estaran a la izquierda*/
-  @media (min-width: 1024px) {
-    .greetings h1,
-    .greetings h2 {
-      text-align: left;
-    }
-
-    .greetings p {
-      text-align: left;
-    }
+  /* @media (min-width: 1024px) {
+  } */
+  .greetings h1, .greetings h2 {
+    text-align: left;
   }
-
-/*Opacidad de las tarjetas*/
-  .v-img {
-    transition: opacity .2s ease-in-out;
-  }
-
-  .v-img:not(.on-hover) {
-    opacity: .9;
-  }
-
-  .v-img.on-hover {
-    opacity: 1;
+  
+  .greetings p {
+    text-align: left;
   }
 </style>
