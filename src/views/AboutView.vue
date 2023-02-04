@@ -1,37 +1,23 @@
 <template>
-  <v-container class="mt-4">
-    <h1>
-      Acerca de esta aplicación
-    </h1>
-    <h2>
-      Información básica
-    </h2>
-    <v-divider thickness="3" />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, hic, sequi veritatis doloremque voluptatem quas expedita tenetur illum reiciendis impedit odio accusantium minima itaque dolores beatae corporis perspiciatis dignissimos molestiae?
-    </p>
-    <h2>
-      Desarrollo
-    </h2>
-    <v-divider thickness="3" />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, hic, sequi veritatis doloremque voluptatem quas expedita tenetur illum reiciendis impedit odio accusantium minima itaque dolores beatae corporis perspiciatis dignissimos molestiae?
-    </p>
-
-    <h2>
-      Contribuciones
-    </h2>
-    <v-divider thickness="3" />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, hic, sequi veritatis doloremque voluptatem quas expedita tenetur illum reiciendis impedit odio accusantium minima itaque dolores beatae corporis perspiciatis dignissimos molestiae?
-    </p>
-  </v-container>
+  <Banner :url-img="bannerImg" :title="'Acerca de'"/>
+  <About/>
 </template>
 <script lang="ts">
+import Banner from "../components/Banner.vue"
+import About from "../components/About.vue"
 export default {
+  components: {
+    Banner,
+    About
+  },
   emits: ['currentPage'],
   mounted() {
     this.$emit('currentPage', 'Acerca de')   
+  },
+  data() {
+    return {
+      bannerImg: new URL("@/assets/acerca_de.jpg", import.meta.url).href
+    }
   },
 }
 </script>

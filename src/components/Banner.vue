@@ -32,8 +32,6 @@ const props = defineProps({
       {{title}}
     </h1>
     <v-divider thickness="3" style="max-width: 70%;"/>
-    <br>
-    <br>
   </div>
 </template>
 <style scoped>
