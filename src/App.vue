@@ -12,16 +12,17 @@
       </template>
 
       <v-app-bar-title class="mt-n1">
-        <strong>{{ currentPage }} </strong> - APP
+        <strong>{{ currentPage.toUpperCase() }} </strong> - APP
       </v-app-bar-title>
     </v-app-bar>
     
     <v-navigation-drawer
       v-model="drawer"
       :width="$vuetify.display.mdAndUp ? 340 : 300"
-      class="navigation-sidebar"
     >
-      <Sidebar @theme="(theme: string) => changeTheme(theme)" />
+      <Sidebar
+        @theme="(theme: string) => changeTheme(theme)"
+      />
     </v-navigation-drawer>
     
     <v-main>
@@ -48,7 +49,7 @@ export default {
   },
   computed: {
     elevation (){
-      return this.drawer === true ? 1 : 0
+      return this.drawer === true ? 2 : 0
     },
   },
   methods: {

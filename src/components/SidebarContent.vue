@@ -15,12 +15,14 @@
     <v-list density="compact">
       <v-list-item
         prepend-icon="mdi-home-outline"
-        title="Inicio"
         to="/"
         class="rounded-lg"
         active-class="bg-orange-accent-4 rounded-pill"
-      />
-  
+      >
+        <v-list-item-title>
+          Inicio
+        </v-list-item-title>
+      </v-list-item>
       <v-divider
         thickness="2"
       />
@@ -31,11 +33,14 @@
         v-for="([icon,title,route], i) in basicInfoItems"
         :key="i"
         :prepend-icon="icon"
-        :title="title"
         :to="route"
         class="rounded-lg"
         active-class="bg-orange-accent-4 rounded-pill"
-      />
+      >
+        <v-list-item-title>
+          {{ title }}
+        </v-list-item-title>
+      </v-list-item>
   
       <v-divider
         thickness="2"
@@ -47,11 +52,14 @@
         v-for="([icon,title,route], i) in associations"
         :key="i"
         :prepend-icon="icon"
-        :title="title"
         :to="route"
         class="rounded-lg"
         active-class="bg-orange-accent-4 rounded-pill"
-      />
+      >
+        <v-list-item-title>
+          {{ title }}
+        </v-list-item-title>
+      </v-list-item>
   
       <v-divider
         thickness="2"
@@ -63,19 +71,28 @@
         v-for="([icon,title,route], i) in resources"
         :key="i"
         :prepend-icon="icon"
-        :title="title"
         :to="route"
         class="rounded-lg"
         active-class="bg-orange-accent-4 rounded-pill"
-      />
+      >
+        <v-list-item-title>
+          {{ title }}
+        </v-list-item-title>
+      </v-list-item>
   
       <v-list-group value="Herramientas">
         <template #activator="{ props }">
           <v-list-item
+            disabled
             v-bind="props"
+            class="rounded-lg"
+            active-class="bg-orange-accent-4 rounded-pill"
             prepend-icon="mdi-toolbox-outline"
-            title="Herramientas"
-          />
+          >
+            <v-list-item-title>
+              Herramientas
+            </v-list-item-title>
+          </v-list-item>
         </template>
       </v-list-group>
   
@@ -87,11 +104,14 @@
       </p>
       <v-list-item
         prepend-icon="mdi-information-outline"
-        title="Acerca de"
         to="about"
         class="rounded-lg"
         active-class="bg-orange-accent-4 rounded-pill"
-      />
+      >
+        <v-list-item-title>
+          Acerca de
+        </v-list-item-title>
+      </v-list-item>
       <v-container align="center">
         <v-switch
           v-model="modelSwitch"
@@ -138,16 +158,21 @@
         this.theme = this.theme === 'light' ? 'dark' : 'light'
         this.$emit("theme", this.theme)
       },
-    },
+    }
   }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .v-list-item {
   margin-left: 7%;
   margin-right: 7%;
+  margin-bottom: 1.5%;
   font-size: 1rem;
-  height: 45px !important;
+  height: 45px !important;  
 }
+.v-list-item-title {
+  font-size: 1.1rem !important;
+}
+
 p {
   margin-left: 8.5%;
   font-weight: bold;
@@ -155,8 +180,8 @@ p {
 .v-divider  {
   margin-top: 5%;
   margin-bottom: 5%;
-  margin-left: 7.5%;
-  margin-right: 7.5%;
-  width: 85%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
 }
 </style>
