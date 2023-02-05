@@ -1,13 +1,20 @@
 <template>
-  <div>
-    
-  </div>
+  <Banner :url-img="bannerImg" :title="'Pensums de Estudio'"/>
 </template>
 <script lang="ts">
+import Banner from "../components/Banner.vue"
 export default {
+  components: {
+    Banner
+  },
   emits: ['currentPage'],
   mounted() {
     this.$emit('currentPage', 'Pensums')   
+  },
+  data() {
+    return {
+      bannerImg: new URL("@/assets/pensum.jpeg", import.meta.url).href
+    }
   },
 }
 </script>

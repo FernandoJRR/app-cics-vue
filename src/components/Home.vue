@@ -155,21 +155,21 @@ import InfoCard from './home/InfoCard.vue';
               title: 'Pensums de Estudio',
               subtitle: 'Para planificar',
               description: ' Recopilatorio de los pensums de las diferentes carreras de la division, y herramienta para calcular diferentes datos acerca de tu pensum.',
-              route: '',
+              route: 'pensums',
               img: new URL("@/assets/pensum.jpeg", import.meta.url).href 
             },
             {
               title: 'FAQ | Primer Ingreso',
               subtitle: 'Para ayudarte al inicio',
               description: 'Preguntas Frecuentes para los estudiantes de primer ingreso',
-              route: '',
+              route: 'faq-primer-ingreso',
               img: new URL("@/assets/faq.jpg", import.meta.url).href 
             },
             {
               title: 'FAQ',
               subtitle: 'Para ayudarte',
               description: 'Preguntas Frecuentes para estudiantes de reingreso',
-              route: '',
+              route: 'faq',
               img: new URL("@/assets/faq.jpg", import.meta.url).href 
             },
           ],
@@ -178,14 +178,14 @@ import InfoCard from './home/InfoCard.vue';
               title: 'CICS',
               subtitle: 'Acerca del comite',
               description: 'Informacion relevante del Comite de Ingenieria en Ciencias y Sistemas',
-              route: '',
+              route: 'cics',
               img: new URL("@/assets/cics.png", import.meta.url).href 
             },
             {
               title: 'AEIO',
               subtitle: 'Acerca de la asociacion',
               description: 'Informacion relevante de la Asociacion de Estudiantes de Ingenieria de Occidente',
-              route: '',
+              route: 'aeio',
               img: new URL("@/assets/aeio.jpg", import.meta.url).href 
             },
           ],
