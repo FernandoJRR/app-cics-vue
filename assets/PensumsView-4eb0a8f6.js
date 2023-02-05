@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as s}from"./index-768b07cc.js";const n={emits:["currentPage"],mounted(){this.$emit("currentPage","Pensums")}};function r(c,o,a,i,m,u){return t(),s("div")}const p=e(n,[["render",r]]);export{p as default};
