@@ -32,6 +32,16 @@ const router = createRouter({
       component: () => import("../views/FaqView.vue")
     },
     {
+      path: "/cics",
+      name: "cics",
+      component: () => import("../views/CICSView.vue")
+    },
+    {
+      path: "/aeio",
+      name: "aeio",
+      component: () => import("../views/AEIOView.vue")
+    },
+    {
       path: "/about",
       name: "about",
       component: () => import("../views/AboutView.vue"),

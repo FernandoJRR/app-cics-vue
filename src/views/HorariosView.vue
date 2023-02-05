@@ -1,5 +1,5 @@
 <template>
-  <Banner :url-img="bannerImg" :title="'Horarios'"/>
+  <Banner :url-img="bannerImg" :title="'Horarios'" style="margin-bottom: 5vh;"/>
   <Horarios/>
 </template>
 <script lang="ts">

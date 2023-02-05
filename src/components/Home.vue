@@ -21,9 +21,27 @@
       </h2>
       <v-divider thickness="3" />
     </div>
-    <v-row>
+    <v-row justify="center">
       <v-col
-        v-for="item, index in sections.basicInfo"
+        v-for="item, index in sections.basicInfo.slice(0,2)"
+        :key="index"
+        cols="12"
+        xs="12"
+        sm="12"
+        lg="4"
+      >
+        <info-card 
+          :img="item.img"
+          :title="item.title"
+          :subtitle="item.subtitle"
+          :description="item.description"
+          :route="item.route"
+        />
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col
+        v-for="item, index in sections.basicInfo.slice(2,4)"
         :key="index"
         cols="12"
         xs="12"
@@ -46,7 +64,7 @@
       </h2>
       <v-divider thickness="3" />
     </div>
-    <v-row>
+    <v-row justify="center">
       <v-col
         v-for="item, index in sections.associations"
         :key="index"
@@ -96,7 +114,7 @@
       </h2>
       <v-divider thickness="3" />
     </div>
-    <v-row>
+    <v-row justify="center">
       <v-col
         v-for="item, index in sections.extra"
         :key="index"

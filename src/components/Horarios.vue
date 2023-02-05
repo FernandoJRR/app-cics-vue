@@ -1,6 +1,9 @@
 <script setup lang="ts">
-const clasesPDF = new URL("@/assets/horarios/horarioClases.pdf", import.meta.url).href
-const labsPDF = new URL("@/assets/horarios/horarioLaboratorios.pdf", import.meta.url).href
+const clasesPDF = new URL("/pdfjs-3.3.122-dist/web/viewer.html?file=", import.meta.url).href + 
+                     new URL("@/assets/horarios/horarioClases.pdf", import.meta.url).href
+
+const labsPDF = new URL("/pdfjs-3.3.122-dist/web/viewer.html?file=", import.meta.url).href + 
+                     new URL("@/assets/horarios/horarioLaboratorios.pdf", import.meta.url).href
 </script>
 <template>
   <div
@@ -8,8 +11,8 @@ const labsPDF = new URL("@/assets/horarios/horarioLaboratorios.pdf", import.meta
     align="center"
   >
     <v-card
-      max-width="60%"
-      min-height="60%"
+      max-width="90%"
+      min-height="80%"
     >
       <v-card-title>
         Clases
@@ -25,7 +28,7 @@ const labsPDF = new URL("@/assets/horarios/horarioLaboratorios.pdf", import.meta
     <V-divider style="margin-top: 1%; margin-bottom: 1%; width: 70%;" />
 
     <v-card
-      max-width="60%"
+      max-width="90%"
       min-height="60%"
     >
       <v-card-title>
