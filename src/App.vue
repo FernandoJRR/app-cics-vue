@@ -30,6 +30,11 @@
         :theme="theme"
         @current-page="currentPage = $event"
       />
+    <v-footer :color="theme === 'light' ? 'white':'#121212'" justify="center">
+      <v-col class="text-center mt-4" cols="12">
+        <strong>CICS</strong> — {{ new Date().getFullYear() }}
+      </v-col>
+    </v-footer>
     </v-main>
   </v-app>
 </template>

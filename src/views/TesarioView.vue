@@ -1,5 +1,5 @@
 <template>
-  <Banner :url-img="bannerImg" :title="'Pensums de Estudio'"/>
+  <Banner :url-img="bannerImg" :title="'Tesario'"/>
 </template>
 <script lang="ts">
 import Banner from "../components/Banner.vue"
@@ -13,8 +13,9 @@ export default {
   },
   data() {
     return {
-      bannerImg: new URL("@/assets/pensum.jpeg", import.meta.url).href
+      bannerImg: new URL("@/assets/resario.jpg", import.meta.url).href
     }
   },
 }
 </script>
+

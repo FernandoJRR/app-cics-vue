@@ -42,6 +42,21 @@ const router = createRouter({
       component: () => import("../views/AEIOView.vue")
     },
     {
+      path: "/manuales",
+      name: "manuales",
+      component: () => import("../views/ManualesView.vue")
+    },
+    {
+      path: "/biblioteca",
+      name: "biblioteca",
+      component: () => import("../views/BibliotecaView.vue")
+    },
+    {
+      path: "/tesario",
+      name: "tesario",
+      component: () => import("../views/TesarioView.vue")
+    },
+    {
       path: "/about",
       name: "about",
       component: () => import("../views/AboutView.vue"),
