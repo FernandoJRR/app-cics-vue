@@ -13,7 +13,7 @@ export default {
   },
   data() {
     return {
-      bannerImg: new URL("@/assets/resario.jpg", import.meta.url).href
+      bannerImg: new URL("@/assets/img/tesario.jpg", import.meta.url).href
     }
   },
 }

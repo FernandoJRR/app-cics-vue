@@ -1,11 +1,14 @@
 <template>
-  <Banner :url-img="bannerImg" :title="'Manuales'"/>
+  <Banner :url-img="bannerImg" :title="'Manuales'" style="margin-bottom: 5vh;"/>
+  <Manuales/>
 </template>
 <script lang="ts">
 import Banner from "../components/Banner.vue"
+import Manuales from "../components/Manuales.vue"
 export default {
   components: {
-    Banner
+    Banner,
+    Manuales
   },
   emits: ['currentPage'],
   mounted() {
@@ -13,7 +16,7 @@ export default {
   },
   data() {
     return {
-      bannerImg: new URL("@/assets/manuales.jpg", import.meta.url).href
+      bannerImg: new URL("@/assets/img/manuales.jpg", import.meta.url).href
     }
   },
 }

@@ -16,7 +16,7 @@ export default {
   emits: ['currentPage'],
   data() {
     return {
-      bannerImg: new URL("@/assets/acerca_de.jpg", import.meta.url).href
+      bannerImg: new URL("@/assets/img/acerca_de.jpg", import.meta.url).href
     }
   },
   mounted() {

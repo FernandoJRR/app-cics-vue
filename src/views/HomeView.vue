@@ -7,9 +7,9 @@ const props = defineProps({
 
 function getLogo(theme: any){
    if (theme === 'light') {
-     return new URL("@/assets/logo-cics-light.png", import.meta.url).href
+     return new URL("@/assets/img/logo-cics-light.png", import.meta.url).href
    }
-   return new URL("@/assets/logo-cics-dark.png", import.meta.url).href
+   return new URL("@/assets/img/logo-cics-dark.png", import.meta.url).href
 }
 </script>
 <script lang="ts">

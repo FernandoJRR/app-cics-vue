@@ -3,9 +3,9 @@
     <v-container align="center">
       <!--Logo USAC (sujeto a cambios), se usa un filtro para volverlo gris para que se vea en ambos theme (sujeto a cambios)-->
       <img
-        alt="Usac Logo"
+        alt="Logo USAC"
         class="logo"
-        src="@/assets/universidad-de-san-carlos-de-guatemala.svg"
+        src="@/assets/img/universidad-de-san-carlos-de-guatemala.svg"
         width="125"
         height="125"
         style="filter: invert(50%); margin-top: 10px; margin-bottom: -5px;"

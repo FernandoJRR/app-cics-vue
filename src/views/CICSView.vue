@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      bannerImg: new URL("@/assets/cics.png", import.meta.url).href
+      bannerImg: new URL("@/assets/img/cics.png", import.meta.url).href
     }
   },
 }

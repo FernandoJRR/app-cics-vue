@@ -17,7 +17,7 @@ export default {
     }
   },
   computed: {
-    bannerImg () { return new URL("@/assets/faq.jpg", import.meta.url).href},
+    bannerImg () { return new URL("@/assets/img/faq.jpg", import.meta.url).href},
   },
   mounted() {
     this.$emit('currentPage', 'FAQ | Primer Ingreso')   

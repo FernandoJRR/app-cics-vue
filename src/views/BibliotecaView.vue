@@ -13,7 +13,7 @@ export default {
   },
   data() {
     return {
-      bannerImg: new URL("@/assets/biblioteca.jpg", import.meta.url).href
+      bannerImg: new URL("@/assets/img/biblioteca.jpg", import.meta.url).href
     }
   },
 }

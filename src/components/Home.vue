@@ -149,28 +149,28 @@ import InfoCard from './home/InfoCard.vue';
               subtitle: 'Para organizarte',
               description: 'Horarios de clases y laboratorios del semestre en curso',
               route: 'horarios',
-              img: new URL("@/assets/horario.jpg", import.meta.url).href
+              img: new URL("@/assets/img/horario.jpg", import.meta.url).href
             },
             {
               title: 'Pensums de Estudio',
               subtitle: 'Para planificar',
               description: ' Recopilatorio de los pensums de las diferentes carreras de la division, y herramienta para calcular diferentes datos acerca de tu pensum.',
               route: 'pensums',
-              img: new URL("@/assets/pensum.jpeg", import.meta.url).href 
+              img: new URL("@/assets/img/pensum.jpeg", import.meta.url).href 
             },
             {
               title: 'FAQ | Primer Ingreso',
               subtitle: 'Para ayudarte al inicio',
               description: 'Preguntas Frecuentes para los estudiantes de primer ingreso',
               route: 'faq-primer-ingreso',
-              img: new URL("@/assets/faq.jpg", import.meta.url).href 
+              img: new URL("@/assets/img/faq.jpg", import.meta.url).href 
             },
             {
               title: 'FAQ',
               subtitle: 'Para ayudarte',
               description: 'Preguntas Frecuentes para estudiantes de reingreso',
               route: 'faq',
-              img: new URL("@/assets/faq.jpg", import.meta.url).href 
+              img: new URL("@/assets/img/faq.jpg", import.meta.url).href 
             },
           ],
           associations: [
@@ -179,14 +179,14 @@ import InfoCard from './home/InfoCard.vue';
               subtitle: 'Acerca del comite',
               description: 'Informacion relevante del Comite de Ingenieria en Ciencias y Sistemas',
               route: 'cics',
-              img: new URL("@/assets/cics.png", import.meta.url).href 
+              img: new URL("@/assets/img/cics.png", import.meta.url).href 
             },
             {
               title: 'AEIO',
               subtitle: 'Acerca de la asociacion',
               description: 'Informacion relevante de la Asociacion de Estudiantes de Ingenieria de Occidente',
               route: 'aeio',
-              img: new URL("@/assets/aeio.jpg", import.meta.url).href 
+              img: new URL("@/assets/img/aeio.jpg", import.meta.url).href 
             },
           ],
           resources: [
@@ -195,21 +195,21 @@ import InfoCard from './home/InfoCard.vue';
               subtitle: 'Para orientarte',
               description: 'Manuales e infografias acerca de procesos importantes en la universidad',
               route: '',
-              img: new URL("@/assets/manuales.jpg", import.meta.url).href 
+              img: new URL("@/assets/img/manuales.jpg", import.meta.url).href 
             },
             {
               title: 'Biblioteca',
               subtitle: 'Para estudiar',
               description: 'Material de estudio de los diferentes cursos de la Division',
               route: '',
-              img: new URL("@/assets/biblioteca.jpg", import.meta.url).href
+              img: new URL("@/assets/img/biblioteca.jpg", import.meta.url).href
             },
             {
               title: 'Tesario',
               subtitle: 'Para investigar',
               description: 'Recopilacion de las tesis de estudiantes de ingenieria a lo largo del tiempo.',
               route: '',
-              img: new URL("@/assets/tesario.jpg", import.meta.url).href
+              img: new URL("@/assets/img/tesario.jpg", import.meta.url).href
             },
           ],
           extra: [
@@ -218,7 +218,7 @@ import InfoCard from './home/InfoCard.vue';
               subtitle: 'Más informacion',
               description: 'Conoce más acerca de esta aplicacion, su desarrollo, y cómo puedes contribuir',
               route: 'about',
-              img: new URL("@/assets/acerca_de.jpg", import.meta.url).href
+              img: new URL("@/assets/img/acerca_de.jpg", import.meta.url).href
             },
           ]
         },
