@@ -1,11 +1,14 @@
 <template>
   <Banner :url-img="bannerImg" :title="'Tesario'"/>
+  <Tesario/>
 </template>
 <script lang="ts">
 import Banner from "../components/Banner.vue"
+import Tesario from "../components/Tesario.vue"
 export default {
   components: {
-    Banner
+    Banner,
+    Tesario
   },
   emits: ['currentPage'],
   mounted() {
