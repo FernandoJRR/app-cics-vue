@@ -21,6 +21,7 @@ export default {
   },
   mounted() {
     this.$emit('currentPage', 'Acerca de')   
+    window.scrollTo(0,0)
   },
 }
 </script>

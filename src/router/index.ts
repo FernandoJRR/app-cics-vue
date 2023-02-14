@@ -53,8 +53,34 @@ const router = createRouter({
     },
     {
       path: "/tesario",
-      name: "tesario",
-      component: () => import("../views/TesarioView.vue")
+      component: () => import("../views/TesarioView.vue"),
+      children: [
+        {
+          path: "",
+          name: "tesario",
+          component: () => import("../components/Tesario.vue")
+        },
+        {
+          path: "civil",
+          component: () => import("../components/TesarioCarrera.vue")
+        },
+        {
+          path: "ciencias-sistemas",
+          component: () => import("../components/TesarioCarrera.vue")
+        },
+        {
+          path: "mecanica",
+          component: () => import("../components/TesarioCarrera.vue")
+        },
+        {
+          path: "industrial",
+          component: () => import("../components/TesarioCarrera.vue")
+        },
+        {
+          path: "mecanica-industrial",
+          component: () => import("../components/TesarioCarrera.vue")
+        },
+      ]
     },
     {
       path: "/about",
