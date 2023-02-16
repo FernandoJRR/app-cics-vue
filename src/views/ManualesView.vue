@@ -13,6 +13,7 @@ export default {
   emits: ['currentPage'],
   mounted() {
     this.$emit('currentPage', 'Pensums')   
+    window.scrollTo(0,0)
   },
   data() {
     return {

@@ -10,6 +10,7 @@ export default {
   emits: ['currentPage'],
   mounted() {
     this.$emit('currentPage', 'FAQ')   
+    window.scrollTo(0,0)
   },
   data () {
     return {

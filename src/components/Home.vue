@@ -135,7 +135,7 @@
   </div>
 </template>
 <script lang="ts">
-import InfoCard from './home/InfoCard.vue';
+import InfoCard from './cards/InfoCard.vue';
   export default {
     components: {
       InfoCard
@@ -194,21 +194,21 @@ import InfoCard from './home/InfoCard.vue';
               title: 'Manuales',
               subtitle: 'Para orientarte',
               description: 'Manuales e infografias acerca de procesos importantes en la universidad',
-              route: '',
+              route: 'manuales',
               img: new URL("@/assets/img/manuales.jpg", import.meta.url).href 
             },
             {
               title: 'Biblioteca',
               subtitle: 'Para estudiar',
               description: 'Material de estudio de los diferentes cursos de la Division',
-              route: '',
+              route: 'biblioteca',
               img: new URL("@/assets/img/biblioteca.jpg", import.meta.url).href
             },
             {
               title: 'Tesario',
               subtitle: 'Para investigar',
               description: 'Recopilacion de las tesis de estudiantes de ingenieria a lo largo del tiempo.',
-              route: '',
+              route: 'tesario',
               img: new URL("@/assets/img/tesario.jpg", import.meta.url).href
             },
           ],

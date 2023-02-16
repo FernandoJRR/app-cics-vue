@@ -17,6 +17,7 @@ export default {
   emits: ['currentPage'],
   mounted() {
     this.$emit('currentPage', 'Inicio')   
+    window.scrollTo(0,0)
   },
 }
 </script>
