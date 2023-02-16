@@ -1,11 +1,12 @@
 <template>
   <Banner :url-img="bannerImg" :title="'Pensums de Estudio'"/>
+  <RouterView/>
 </template>
 <script lang="ts">
 import Banner from "../components/Banner.vue"
 export default {
   components: {
-    Banner
+    Banner,
   },
   emits: ['currentPage'],
   mounted() {

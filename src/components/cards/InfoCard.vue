@@ -49,7 +49,7 @@ export default {
     },
     subtitle: {
       type: String,
-      required: true
+      required: false
     },
     title: {
       type: String,
@@ -57,7 +57,7 @@ export default {
     },
     description: {
       type: String,
-      required: true
+      required: false
     },
     route: {
       type: String,

@@ -1,22 +1,41 @@
 <template>
   <h1 align="center">{{titulo}}</h1>
   <v-container>
+    <v-btn
+      prepend-icon="mdi-arrow-left"
+      @click="regresarATesario()"
+    >Regresar</v-btn>
     <template v-if="tesarioActual === 'civil'">
-      <a v-for="tesis_val in tesis.civil"
-        :href="tesis_val.link"
-        target="_blank"
-      >{{tesis_val.autor}}, {{tesis_val.fecha}}</a>.
-    <iframe v-for="tesis_val in tesis.civil"
-    :src="tesis_val.link" style="width: 90vw; height: 400px;" allow="autoplay" >
-    </iframe>
+      <!-- PREVIEW de la tesis, descomentar para ver un preview
+      <iframe v-for="tesis_val in tesis.civil"
+      :src="tesis_val.link" style="width: 90vw; height: 400px;" allow="autoplay" >
+      </iframe>
+      -->
+      <v-container v-for="tesis_val in tesis.civil">
+        <a :href="tesis_val.link" target="_blank">
+          <InfoCard 
+          img="" 
+          :title="tesis_val.autor" 
+          :subtitle="tesis_val.fecha"
+          route=""
+          />
+        </a>
+      </v-container>
     </template>
+
     <template v-else-if="tesarioActual === 'sistemas'"></template>
     <template v-else-if="tesarioActual === 'mecanica'"></template>
     <template v-else-if="tesarioActual === 'industrial'">
-      <a v-for="tesis_val in tesis.industrial"
-        :href="tesis_val.link"
-        target="_blank"
-      >{{tesis_val.autor}}, {{tesis_val.fecha}}</a>.
+      <v-container v-for="tesis_val in tesis.industrial">
+        <a :href="tesis_val.link" target="_blank">
+          <InfoCard 
+          img="" 
+          :title="tesis_val.autor" 
+          :subtitle="tesis_val.fecha"
+          route=""
+          />
+        </a>
+      </v-container>
     </template>
     <template v-else-if="tesarioActual === 'mecanica-industrial'"></template>
   </v-container>
@@ -25,6 +44,7 @@
 import Banner from "../components/Banner.vue"
 import InfoCard from "./cards/InfoCard.vue"
 import { useRoute } from "vue-router"
+import router from "@/router"
 export default {
   components: {
     Banner,
@@ -81,7 +101,11 @@ export default {
         ]
       }    
     }
-
+  },
+  methods: {
+    regresarATesario() {
+      router.push("/tesario")
+    }
   },
 }
 </script>

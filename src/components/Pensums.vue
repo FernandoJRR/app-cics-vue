@@ -45,10 +45,5 @@ data() {
     ],
       }
     },
-    methods: {
-      emitCarrera(nombreCarrera: string) {
-        this.$emit('tesarioActual', nombreCarrera)
-      }
-    },
 }
 </script>
