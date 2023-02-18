@@ -14,7 +14,12 @@
         sm="12"
         lg="4"
       >
-      <PensumCard :color="colorCarrera" :semestre="semestre"/>
+      <PensumCard 
+        :primary-color="colorCarrera" 
+        :secondary-color="colorSecundario" 
+        :terciary-color="colorTerciario" 
+        :semestre="semestre"
+      />
       </v-col>
     </v-row>
   </v-container>
@@ -37,26 +42,36 @@ export default {
         this.titulo = "Civil"
         this.carreraActual = "civil"
         this.colorCarrera = "bg-red-darken-1"
+        this.colorSecundario = "bg-red-lighten-4"
+        this.colorTerciario = "bg-red-lighten-2"
         break;
       case "/pensums/ciencias-sistemas":
         this.titulo = "Ciencias y Sistemas"
         this.carreraActual = "sistemas",
         this.colorCarrera = "bg-orange-accent-4"
+        this.colorSecundario = "bg-deep-orange-lighten-4"
+        this.colorTerciario = "bg-orange-lighten-3"
         break;
       case "/pensums/mecanica":
         this.titulo = "Mecanica"
         this.carreraActual = "mecanica"
         this.colorCarrera = "bg-green-darken-1"
+        this.colorSecundario = "bg-green-lighten-3"
+        this.colorTerciario = "bg-green-lighten-2"
         break;
       case "/pensums/industrial":
         this.titulo = "Industrial"
         this.carreraActual = "industrial"
         this.colorCarrera = "bg-light-green-darken-2"
+        this.colorSecundario = "bg-light-green-lighten-4"
+        this.colorTerciario = "bg-light-green-lighten-3"
         break;
       case "/pensums/mecanica-industrial":
         this.titulo = "Mecanica Industrial"
         this.carreraActual = "mecanica-industrial"
         this.colorCarrera = "bg-teal-darken-2"
+        this.colorSecundario = "bg-teal-lighten-3"
+        this.colorTerciario = "bg-teal-lighten-1"
         break;
       default:
         break;
@@ -68,6 +83,8 @@ export default {
       titulo: '',
       carreraActual: '',
       colorCarrera: '',
+      colorSecundario: '',
+      colorTerciario: '',
       semestres : [
         {
           nombre: "Primer",

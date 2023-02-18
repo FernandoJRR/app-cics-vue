@@ -4,7 +4,7 @@
     max-width="374"
   >
     <v-card-title 
-      :class="color"
+      :class="primaryColor"
     >
       <v-row no-gutters>
         <v-col>
@@ -21,6 +21,7 @@
 
     <v-divider class="mx-4 mb-1"></v-divider>
 
+    <!--
     <v-card-item>
       <v-card-title>Cafe Badilico</v-card-title>
 
@@ -60,6 +61,43 @@
 
       <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
     </v-card-text>
+    -->
+
+    <v-container v-for="n in 5">
+      <v-card>
+        <v-row>
+          <v-col style="background-color: yellow;" cols="1">
+          </v-col>
+          <v-col cols="2" align-self="center">
+            <v-row justify="center" :class="primaryColor">
+              0017
+            </v-row>
+            <v-row justify="center" :class="terciaryColor">
+              5
+            </v-row>
+          </v-col>
+          <v-col :class="secondaryColor">
+            <v-card-title>Curso {{n}}</v-card-title>
+          </v-col>
+          <v-col cols="2" class="pt-3" align-self="center">
+            <p v-for="j in 1">
+              000{{j}}
+            </p>
+          </v-col>
+          <v-col cols="2" :class="primaryColor">
+            <v-btn-toggle 
+              background-color="primary" 
+              :v-model="false" 
+              rounded="true"
+              class="pr-2" 
+              color="green"
+              style="max-height: 80%; padding-top: 30%;">
+              <v-btn icon="mdi-check"/>
+            </v-btn-toggle>
+          </v-col>
+        </v-row>
+      </v-card>
+    </v-container>
 
     <v-divider class="mx-4 mb-1"></v-divider>
 
@@ -88,7 +126,15 @@
 <script lang="ts">
 export default {
   props: {
-    color: {
+    primaryColor: {
+      type: String,
+      required: true
+    },
+    secondaryColor: {
+      type: String,
+      required: true
+    },
+    terciaryColor: {
       type: String,
       required: true
     },
