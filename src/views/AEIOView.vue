@@ -13,7 +13,7 @@ export default {
   },
   emits: ['currentPage'],
   mounted() {
-    this.$emit('currentPage', 'Horarios')
+    this.$emit('currentPage', 'AEIO')
     window.scrollTo(0,0)
   },
   data() {

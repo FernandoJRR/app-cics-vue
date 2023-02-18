@@ -27,23 +27,23 @@ const router = createRouter({
         },
         {
           path: "civil",
-          component: () => import("../components/TesarioCarrera.vue")
+          component: () => import("../components/PensumCarrera.vue")
         },
         {
           path: "ciencias-sistemas",
-          component: () => import("../components/TesarioCarrera.vue")
+          component: () => import("../components/PensumCarrera.vue")
         },
         {
           path: "mecanica",
-          component: () => import("../components/TesarioCarrera.vue")
+          component: () => import("../components/PensumCarrera.vue")
         },
         {
           path: "industrial",
-          component: () => import("../components/TesarioCarrera.vue")
+          component: () => import("../components/PensumCarrera.vue")
         },
         {
           path: "mecanica-industrial",
-          component: () => import("../components/TesarioCarrera.vue")
+          component: () => import("../components/PensumCarrera.vue")
         },
       ]
     },

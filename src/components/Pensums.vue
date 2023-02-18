@@ -20,27 +20,27 @@ data() {
       {
         carrera:"Civil",
         img: new URL("@/assets/img/logo_civil.jpg", import.meta.url).href,
-        link:"/tesario/civil"
+        link:"/pensums/civil"
       }, 
       {
         carrera:"Ciencias y Sistemas",
         img: new URL("@/assets/img/logo_sistemas.jpg", import.meta.url).href,
-        link:"/tesario/ciencias-sistemas"
+        link:"/pensums/ciencias-sistemas"
       }, 
       {
         carrera:"Mecanica",
         img: new URL("@/assets/img/logo_mecanica.jpg", import.meta.url).href,
-        link:"/tesario/mecanica"
+        link:"/pensums/mecanica"
       }, 
       {
         carrera:"Industrial",
         img: new URL("@/assets/img/logo_industrial.jpg", import.meta.url).href,
-        link:"/tesario/industrial"
+        link:"/pensums/industrial"
       }, 
       {
         carrera:"Mecanica Industrial",
         img: new URL("@/assets/img/logo_mecanica_industrial.jpg", import.meta.url).href,
-        link:"/tesario/mecanica-industrial"
+        link:"/pensums/mecanica-industrial"
       }
     ],
       }
